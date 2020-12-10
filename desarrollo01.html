@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio01</title>
+</head>
+<body>
+    <h1>Promedio</h1>
+    <div class="contenedor">
+        <input type="text" name="numero" id="num1" class="subcount"placeholder="num1">
+        <input type="text" name="numero" id="num2" class="subcount"placeholder="num2"><br><br>
+        <input type="text" name="numero" id="num3" class="subcount"placeholder="num3">
+        <input type="text" name="numero" id="num4" class="subcount"placeholder="num4">
+
+    </div>
+    <h2>Resultados</h2>
+    <div class="contenedor">
+        <input type="text" id="subcount"placeholder="categoria">
+        <td><input type="button" value="calcular" id="boton" onclick="promediar()"></td>
+
+    </div>
+    <script>
+        function contenido(id){
+            return document.getElementById(id)
+        }
+        function promediar (){
+            var pn=parseInt(contenido("num1").value);
+            var sn=parseInt(contenido("num2").value);
+            var tn=parseInt(contenido("num3").value);
+            var rn=parseInt(contenido("num4").value);
+            var total=(pn+sn+tn+rn)/4;
+            contenido ("prom").value=total;
+        }
+    </script>
+    
+</body>
+</html>
